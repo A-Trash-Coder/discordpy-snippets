@@ -1,0 +1,68 @@
+{
+    "DiscordCog": {
+        "prefix": "commands.Cog",
+        "description": "Creates a discord.py Cog",
+        "body": [
+            "from discord.ext import commands",
+            "",
+            "class Example(commands.Cog):",
+            "    def __init__(self, bot):",
+            "        self.bot = bot",
+            "",
+            "",
+            "",
+            "def setup(bot):",
+            "    bot.add_cog(Example(bot))"
+        ]
+    },
+    "DiscordCommand": {
+        "prefix": "@commands.command",
+        "description": "Creates a discord.py command",
+        "body": [
+            "    @commands.command()",
+            "    async def command_name(self, ctx, arg1):",
+            "        await ctx.send(\"Example\")",
+        ]
+    },
+    "DiscordBot": {
+        "prefix": "commands.Bot",
+        "description": "Creates a basic commands.Bot bot in discord.py",
+        "body": [
+            "from discord.ext import commands",
+            "import discord ",
+            "",
+            "extensions = [\"\"]",
+            "",
+            "class Bot(commands.Bot):",
+            "    def __init__(self):",
+            "        super().__init__(command_prefix = \"!\", intents = discord.Intents.default())",
+            "",
+            "    async def on_ready(self):",
+            "        print(\"Ready\")",
+            "",
+            "    async def on_connect(self):",
+            "        for extension in extensions:",
+            "            self.load_extension(extension)",
+            "",
+            "    async def start(self):",
+            "        await self.login(\"token\")",
+            "        try:",
+            "            await self.connect()",
+            "        except KeyboardInterrupt:",
+            "            await self.stop()",
+            "",
+            "    async def stop(self):",
+            "        await super().logout()",
+            "",
+            "    def run(self):",
+            "        try:",
+            "            self.loop.run_until_complete(self.start())",
+            "        except KeyboardInterrupt:",
+            "            self.loop.run_until_complete(self.stop())",
+            "",
+            "",
+            "if __name__ == \"__main__\":",
+            "    Bot().run()"
+        ]
+    }
+}

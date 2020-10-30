@@ -1,0 +1,26 @@
+{
+  "name": "discordpy-snippets",
+  "displayName": "Discord.py Snippets",
+  "publisher": "ATrashCoder",
+  "repository": {
+    "url": "https://github.com/A-Trash-Coder/discordpy-snippets",
+    "type": "git"
+  },
+  "icon": "assets/discord.py.png",
+  "description": "Useful snippets for developing a Discord bot in Discord.py",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.50.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
