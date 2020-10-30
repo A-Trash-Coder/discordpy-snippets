@@ -2,13 +2,10 @@
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+This extention allows snippets to be added for discord.py.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> Example:
+> ![Example](https://i.adiscorduser.com/3ZpUzbn.gif)
 
 
 ## Extension Settings
